@@ -1,7 +1,10 @@
 import Image from "next/image";
 import "./globals.scss";
+import { fetchPosts } from "@/app/lib/data";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await fetchPosts();
+
   return (
     <main>
       <nav>
@@ -121,6 +124,32 @@ export default function Home() {
             width={678}
             height={526}
           />
+        </div>
+      </section>
+      <section>
+        <h1>Blog</h1>
+        <p>
+          Abaixo estão artigos que escrevo a afim de elucidar conceitos sobre
+          EMDR, psicologia clínica, tratamentos de traumas e saúde mnetal no
+          geral. Aproveite!
+        </p>
+
+        <div>
+          {posts.map(function renderPosts(post) {
+            <article>
+              <div className="post__cover">
+                <Image src={post.cover_image_url} alt="Post's cover" />
+              </div>
+              <div className="post__title">
+                <p>{post.title}</p>
+                <small className="post__date">{post.updated_at}</small>
+              </div>
+              <div className="post_body">{post.content_html}</div>
+              <div className="post__footer">
+                <button>Leia Agora</button>
+              </div>
+            </article>;
+          })}
         </div>
       </section>
     </main>
