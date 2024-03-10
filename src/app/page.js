@@ -149,7 +149,7 @@ export default async function Home() {
         </p>
 
         <div className="articles">
-          {doubledPosts.map(function renderPosts(post) {
+          {posts.map(function renderPosts(post) {
             return <PostCard post={post} key={post.id} />;
           })}
         </div>

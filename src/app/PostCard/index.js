@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import ImageWithFallback from "../Components/ImageWithFallback";
 import styles from "./styles.module.scss";
 
 export default function PostCard({ post }) {
@@ -12,11 +13,12 @@ export default function PostCard({ post }) {
   return (
     <article key={post.id} className={styles.article}>
       <div className={styles.article__cover}>
-        <Image
+        <ImageWithFallback
           src={post.cover_image_url}
           alt="Post's cover"
           width={330}
           height={312}
+          fallback="/fallback-post.png"
         />
       </div>
       <div className={styles.article__header}>
