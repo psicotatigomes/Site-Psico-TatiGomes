@@ -1,17 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { fetchPosts } from "@/app/lib/data";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
-import dynamic from "next/dynamic";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { EditorState } from "draft-js";
-
-const EditorComponent = (props) => {
-  return <Editor {...props} />;
-};
+import styles from "./styles.module.scss";
+import EditorComponent from "../Editor/Editor";
 
 export default function Admin() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -38,7 +31,7 @@ export default function Admin() {
   };
 
   return (
-    <section>
+    <section className={styles.container}>
       <h1>ADMIN PAGE</h1>
 
       <label htmlFor="article-title">
