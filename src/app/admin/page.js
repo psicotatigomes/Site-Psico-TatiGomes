@@ -26,11 +26,15 @@ export default function Admin() {
 
   const markup = draftToHtml(rawContentState, hashtagConfig, directional);
 
-  console.log(markup);
-
   const saveArticle = () => {
-    fetch("/admin/api");
-    console.log("saveArticle");
+    fetch("/admin/api", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "Título",
+        content_html: markup,
+        cover_image_url: "/url/from/s3",
+      }),
+    });
   };
 
   return (

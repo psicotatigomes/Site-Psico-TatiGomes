@@ -1,10 +1,12 @@
 import Image from "next/image";
 import "./globals.scss";
 import { fetchPosts } from "@/app/lib/data";
+import PostCard from "./PostCard";
 
 export default async function Home() {
   const posts = await fetchPosts();
 
+  console.log(posts);
   return (
     <main>
       <nav>
@@ -136,19 +138,8 @@ export default async function Home() {
 
         <div>
           {posts.map(function renderPosts(post) {
-            <article>
-              <div className="post__cover">
-                <Image src={post.cover_image_url} alt="Post's cover" />
-              </div>
-              <div className="post__title">
-                <p>{post.title}</p>
-                <small className="post__date">{post.updated_at}</small>
-              </div>
-              <div className="post_body">{post.content_html}</div>
-              <div className="post__footer">
-                <button>Leia Agora</button>
-              </div>
-            </article>;
+            console.log(post);
+            return <PostCard post={post} key={post.id} />;
           })}
         </div>
       </section>
