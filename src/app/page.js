@@ -6,6 +6,7 @@ import PostCard from "./PostCard";
 export default async function Home() {
   const posts = await fetchPosts();
 
+  const doubledPosts = [...posts, ...posts, ...posts, ...posts];
   console.log(posts);
   return (
     <main>
@@ -53,7 +54,7 @@ export default async function Home() {
           />
         </div>
         <div className="text-container">
-          <h2>Sobre mim</h2>
+          <h2 className="section-title">Sobre mim</h2>
           <p>
             Olá, me chamo Tatiana. Sou psicóloga e ofereço atendimento de forma
             on-line para pessoas adultas. Se você sofre de alguma forma em razão
@@ -101,7 +102,9 @@ export default async function Home() {
       />
       <section className="path">
         <div className="text-container">
-          <h2>Encontre o caminho para uma vida mais livre, leve e plena!</h2>
+          <h2 className="section-title">
+            Encontre o caminho para uma vida mais livre, leve e plena!
+          </h2>
           <p>
             Traumas não tratados, conscientes ou não, podem se tornar bloqueio
             para uma mais livre, leve e plena. Eu ofereço psicoterapia para
@@ -128,21 +131,36 @@ export default async function Home() {
           />
         </div>
       </section>
-      <section>
-        <h1>Blog</h1>
+      <Image
+        src="/divider-top.png"
+        alt="section divider"
+        width={1440}
+        height={186}
+        className="divider top"
+      />
+      <section className="blog" id="blog">
+        <h2 className="section-title">Blog</h2>
         <p>
           Abaixo estão artigos que escrevo a afim de elucidar conceitos sobre
           EMDR, psicologia clínica, tratamentos de traumas e saúde mnetal no
-          geral. Aproveite!
+          geral.
+          <br />
+          Aproveite!
         </p>
 
-        <div>
-          {posts.map(function renderPosts(post) {
-            console.log(post);
+        <div className="articles">
+          {doubledPosts.map(function renderPosts(post) {
             return <PostCard post={post} key={post.id} />;
           })}
         </div>
       </section>
+      <Image
+        src="/divider-bottom.png"
+        alt="section divider"
+        width={1440}
+        height={186}
+        className="divider"
+      />
     </main>
   );
 }

@@ -1,28 +1,33 @@
 "use client";
 import Image from "next/image";
+import styles from "./styles.module.scss";
 
 export default function PostCard({ post }) {
   const parser = new DOMParser();
-  console.log(post.content_html);
-  console.log(parser.parseFromString(post.content_html, "text/html"));
+
+  const parseStringToHtml = (htmlString) => {
+    const doc = parser.parseFromString(htmlString, "text/html");
+    return { __html: doc.body.innerHTML };
+  };
   return (
-    <article key={post.id}>
-      <div className="post__cover">
+    <article key={post.id} className={styles.article}>
+      <div className={styles.article__cover}>
         <Image
           src={post.cover_image_url}
           alt="Post's cover"
-          width={290}
-          height={320}
+          width={330}
+          height={312}
         />
       </div>
-      <div className="post__title">
+      <div className={styles.article__header}>
         <p>{post.title}</p>
-        {/* <small className="post__date">{post.updated_at}</small> */}
+        {/* <small className="article__date">{post.updated_at}</small> */}
       </div>
-      <div className="post_body">
-        {parser.parseFromString(post.content_html, "text/html").embeds}
-      </div>
-      <div className="post__footer">
+      <div
+        className={styles.article__body}
+        dangerouslySetInnerHTML={parseStringToHtml(post.content_html)}
+      />
+      <div className={styles.article__footer}>
         <button>Leia Agora</button>
       </div>
     </article>
