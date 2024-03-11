@@ -1,9 +1,18 @@
-export const dynamic = "force-dynamic"; // defaults to auto
+import { unstable_noStore as noStore } from "next/cache";
 import { sql } from "@vercel/postgres";
 
+export const dynamic = "force-dynamic"; // defaults to auto
+
 export async function GET(request) {
-  console.log("ROUTE:GET");
-  return new Response("GET");
+  noStore();
+  try {
+    const data = await sql`SELECT * FROM posts`;
+    console.log(data);
+    return new Response(JSON.stringify(data));
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to fetch posts data.");
+  }
 }
 
 export async function POST(request) {
