@@ -33,7 +33,7 @@ export default function Admin() {
       body: JSON.stringify({
         title: "Título",
         content_html: markup,
-        cover_image_url: undefined,
+        cover_image_url: "https://source.unsplash.com/random/",
       }),
     });
   };
