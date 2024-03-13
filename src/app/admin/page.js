@@ -6,6 +6,19 @@ import styles from "./styles.module.scss";
 import EditorComponent from "../Components/Editor/Editor";
 import useSWR from "swr";
 import Image from "next/image";
+import {
+  Container,
+  Heading,
+  Input,
+  Text,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  VStack,
+  StackDivider,
+  Button,
+} from "@chakra-ui/react";
 
 import htmlToDraft from "html-to-draftjs";
 
@@ -76,6 +89,7 @@ export default function Admin() {
       if (file.size / 1024 / 1024 > 50) {
         console.error("File size too big (max 50MB)");
       } else {
+        console.log(file);
         setFile(file);
         const reader = new FileReader();
         reader.onload = (e) => {
@@ -86,32 +100,76 @@ export default function Admin() {
     }
   };
 
+  const removeImage = () => {
+    setFile(null);
+    setData(null);
+  };
+
   return (
     <>
-      <section className={styles.container}>
-        <h1>ADMIN PAGE</h1>
+      <Container maxW="2xl" centerContent>
+        <Heading as="h1">ADMIN PAGE</Heading>
 
-        <label htmlFor="article-title">
-          Título
-          <input
-            name="article-title"
-            id="article-title"
-            type="text"
-            value={articleTitle}
-            onChange={(e) => setArticleTitle(e.target.value)}
-            placeholder="Título do artigo"
-          />
-        </label>
+        <VStack
+          align="start"
+          spacing={5}
+          divider={<StackDivider borderColor="gray.200" />}
+        >
+          <FormControl>
+            <FormLabel>Título do artigo</FormLabel>
+            <Input
+              value={articleTitle}
+              onChange={(e) => setArticleTitle(e.target.value)}
+              placeholder="Insira aqui o título"
+              size="md"
+              name="article-title"
+              id="article-title"
+              type="text"
+            />
+            <FormHelperText>
+              Esse é o título que vai aparecer na página principal e no topo da
+              página do artigo
+            </FormHelperText>
+          </FormControl>
 
-        <input
-          name="file"
-          ref={inputFileRef}
-          onChange={onImgInsertion}
-          type="file"
-          required
-        />
-        <p>preview</p>
-        {image && <Image img src={image} alt="" width={400} height={250} />}
+          <FormControl>
+            <FormLabel>Imagem de capa</FormLabel>
+
+            <Input
+              onChange={onImgInsertion}
+              placeholder="Insira aqui o título"
+              size="md"
+              id="article-title"
+              name="file"
+              ref={inputFileRef}
+              type="file"
+            />
+
+            <FormHelperText>
+              O uso de imagem em paisagem -"deitada"- é recomendado.
+            </FormHelperText>
+          </FormControl>
+        </VStack>
+
+        {image && (
+          <>
+            <Image
+              src={image}
+              alt="Imagem que será usada de capa para o artigo do blog"
+              width={400}
+              height={250}
+              style={{ objectFit: "fill", aspectRatio: "16/9" }}
+            />
+            <Button
+              onClick={removeImage}
+              colorScheme="red"
+              size="sm"
+              variant="ghost"
+            >
+              Remover imagem
+            </Button>
+          </>
+        )}
 
         <EditorComponent
           editorState={editorState}
@@ -119,9 +177,9 @@ export default function Admin() {
           toolbar={{ fontFamily: { inDropdown: false } }}
         />
 
-        <button onClick={saveArticle}>Salvar artigo</button>
-      </section>
-      <section className={styles.container}>
+        <Button onClick={saveArticle} colorScheme="blue">
+          Salvar artigo
+        </Button>
         <h2>List de posts</h2>
         <ul>
           {data.rows.map((post) => {
@@ -133,7 +191,7 @@ export default function Admin() {
             );
           })}
         </ul>
-      </section>
+      </Container>
     </>
   );
 }
