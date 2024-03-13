@@ -1,6 +1,7 @@
 import { unstable_noStore as noStore } from "next/cache";
 import { sql } from "@vercel/postgres";
 
+
 export const dynamic = "force-dynamic"; // defaults to auto
 
 export async function GET(request) {
@@ -16,12 +17,16 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
-  const { title, content_html, cover_image_url } = await request.json();
-  const res =
-    await sql`INSERT INTO posts (title, content_html, cover_image_url) VALUES (${title}, ${content_html}, ${cover_image_url})`;
+  try {
+    const { title, content_html, cover_image_url } = await request.json();
+    const res =
+      await sql`INSERT INTO posts (title, content_html, cover_image_url) VALUES (${title}, ${content_html}, ${cover_image_url})`;
 
-  console.log(res);
-  return new Response(res);
+    return Response.json(res);
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to insert post data.");
+  }
 }
 
 export async function PUT(request) {
