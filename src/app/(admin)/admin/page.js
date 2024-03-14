@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import draftToHtml from "draftjs-to-html";
 import { EditorState, ContentState, convertToRaw } from "draft-js";
 import styles from "./styles.module.scss";
-import EditorComponent from "../components/Editor/Editor";
+import EditorComponent from "../../components/Editor/Editor";
 import useSWR from "swr";
 import Image from "next/image";
 import {
@@ -31,10 +31,12 @@ export default function Admin() {
   const [articleTitle, setArticleTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const [editLoading, setEditLoading] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const inputFileRef = useRef(null);
   const [blob, setBlob] = useState(null);
   const [file, setFile] = useState(null);
   const [image, setData] = useState(null);
+  const [currPost, setCurrPost] = useState(null);
 
   const { data, error, isLoading } = useSWR("/admin/api", fetcher);
 
@@ -49,27 +51,38 @@ export default function Admin() {
     const rawContentState = convertToRaw(editorState.getCurrentContent());
     const markup = draftToHtml(rawContentState, hashtagConfig);
 
-    if (!inputFileRef.current?.files) {
-      throw new Error("No file selected");
+    if (isEditing) {
+      await fetch("/admin/api", {
+        method: "PUT",
+        body: JSON.stringify({
+          postId: currPost.id,
+          title: articleTitle,
+          content_html: markup,
+          cover_image_url: image,
+        }),
+      });
+      setIsEditing(false);
+    } else {
+      if (!inputFileRef.current?.files) {
+        throw new Error("No file selected");
+      }
+
+      const file = inputFileRef.current.files[0];
+
+      const blob = await fetch(`/admin/api/images/?filename=${file.name}`, {
+        method: "POST",
+        body: file,
+      });
+      const blobRes = await blob.json();
+      await fetch("/admin/api", {
+        method: "POST",
+        body: JSON.stringify({
+          title: articleTitle,
+          content_html: markup,
+          cover_image_url: blobRes.url,
+        }),
+      });
     }
-
-    const file = inputFileRef.current.files[0];
-
-    const blob = await fetch(`/admin/api/images/?filename=${file.name}`, {
-      method: "POST",
-      body: file,
-    });
-
-    const blobRes = await blob.json();
-
-    await fetch("/admin/api", {
-      method: "POST",
-      body: JSON.stringify({
-        title: articleTitle,
-        content_html: markup,
-        cover_image_url: blobRes.url,
-      }),
-    });
 
     setEditorState(EditorState.createEmpty());
     setArticleTitle("");
@@ -80,7 +93,9 @@ export default function Admin() {
   };
 
   const editPost = async (postId) => {
+    setIsEditing(true);
     var post = data.rows.find((post) => post.id == postId);
+    setCurrPost(post);
     setData(null);
     setEditLoading(true);
 

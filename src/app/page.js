@@ -5,18 +5,9 @@ import PostCard from "../app/components/PostCard";
 
 export default async function Home() {
   const posts = await fetchPosts();
-
-  const doubledPosts = [...posts, ...posts, ...posts, ...posts];
   console.log(posts);
   return (
     <main>
-      <nav>
-        <a href="#hero">Início</a>
-        <a href="#about">Sobre mim</a>
-        <a href="#services">Serviços</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contato</a>
-      </nav>
       <section className="hero">
         <video autoPlay muted loop className="hero-video">
           <source src="hero-video.mp4" type="video/mp4" />

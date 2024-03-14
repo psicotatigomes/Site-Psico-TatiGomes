@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import ImageWithFallback from "../ImageWithFallback";
 import styles from "./styles.module.scss";
 
@@ -9,6 +10,7 @@ export default function PostCard({ post }) {
     const doc = parser.parseFromString(htmlString, "text/html");
     return { __html: doc.body.innerHTML };
   };
+
   return (
     <article key={post.id} className={styles.article}>
       <div className={styles.article__cover}>
@@ -28,7 +30,9 @@ export default function PostCard({ post }) {
         dangerouslySetInnerHTML={parseStringToHtml(post.content_html)}
       />
       <div className={styles.article__footer}>
-        <button>Leia Agora</button>
+        <button>
+          <Link href={`/posts/${post.title}&id=${post.id}`}>Leia Agora</Link>
+        </button>
       </div>
     </article>
   );
