@@ -34,5 +34,13 @@ export async function PUT(request) {
 }
 
 export async function DELETE(request) {
-  console.log("ROUTE:DELETE");
+  try {
+    const { postId } = await request.json();
+    const res = await sql`DELETE FROM posts WHERE id=${postId}; `;
+
+    return Response.json(res);
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to delete post data.");
+  }
 }

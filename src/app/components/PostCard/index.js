@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import ImageWithFallback from "../Components/ImageWithFallback";
+import ImageWithFallback from "../ImageWithFallback";
 import styles from "./styles.module.scss";
 
 export default function PostCard({ post }) {
@@ -23,7 +22,6 @@ export default function PostCard({ post }) {
       </div>
       <div className={styles.article__header}>
         <p>{post.title}</p>
-        {/* <small className="article__date">{post.updated_at}</small> */}
       </div>
       <div
         className={styles.article__body}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./globals.scss";
 import { fetchPosts } from "@/app/lib/data";
-import PostCard from "./PostCard";
+import PostCard from "../app/components/PostCard";
 
 export default async function Home() {
   const posts = await fetchPosts();
