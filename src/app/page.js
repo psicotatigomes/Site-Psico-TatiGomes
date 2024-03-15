@@ -5,7 +5,7 @@ import PostCard from "../app/components/PostCard";
 
 export default async function Home() {
   const posts = await fetchPosts();
-  console.log(posts);
+
   return (
     <main>
       <section className="hero">
