@@ -1,8 +1,14 @@
+"use client";
+import { useState } from "react";
 import "./styles.scss";
 import Image from "next/image";
 import { poppins } from "@/app/fonts";
 
 function ContactForm() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const userMessage = `Olá, meu nome é ${name}. ${message}`;
   return (
     <div className={`${poppins.className} form`}>
       <div className="form__infos">
@@ -36,7 +42,13 @@ function ContactForm() {
         <p className="input-wrapper">
           <label htmlFor="name">
             Seu nome
-            <input type="text" id="name" name="name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
         </p>
         <p className="input-wrapper">
@@ -48,11 +60,18 @@ function ContactForm() {
               cols="30"
               rows="10"
               placeholder="Deixe sua mensagem"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </label>
         </p>
         <p className="button-wraper">
-          <button className="button">Enviar mensagem</button>
+          <a
+            className="button"
+            href={`https://api.whatsapp.com/send?phone=5513996188808&text=${userMessage}`}
+          >
+            Enviar mensagem
+          </a>
         </p>
       </div>
     </div>
