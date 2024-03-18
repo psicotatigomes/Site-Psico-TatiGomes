@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./globals.scss";
 import { fetchPosts } from "@/app/lib/data";
 import PostCard from "../app/components/PostCard";
+import ContactForm from "./components/ContactForm";
 
 export default async function Home() {
   const posts = await fetchPosts();
@@ -152,6 +153,14 @@ export default async function Home() {
         height={186}
         className="divider"
       />
+      <section className="contact" id="contact">
+        <h2 className="section-title">Contato</h2>
+        <p>
+          Eu gostaria de ouvir de você. Envie uma mensagem e começaremos esta
+          conversa em direção à sua <br /> jornada de autocuidado.
+        </p>
+        <ContactForm />
+      </section>
     </main>
   );
 }
