@@ -24,7 +24,12 @@ export default async function Home() {
             transformação
           </p>
           <p>
-            <button>Agende uma consulta</button>
+            <a
+              className="button"
+              href={`https://api.whatsapp.com/send?phone=5513996188808&text=Olá, gostaria de agendar um primeiro contato!`}
+            >
+              Entre em contato!
+            </a>
           </p>
         </div>
       </section>

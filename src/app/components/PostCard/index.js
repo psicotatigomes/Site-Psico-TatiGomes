@@ -30,9 +30,12 @@ export default function PostCard({ post }) {
         dangerouslySetInnerHTML={parseStringToHtml(post.content_html)}
       />
       <div className={styles.article__footer}>
-        <button>
-          <Link href={`/posts/${post.title}&id=${post.id}`}>Leia Agora</Link>
-        </button>
+        <Link
+          className={styles.button}
+          href={`/posts/${post.title}&id=${post.id}`}
+        >
+          Leia Agora
+        </Link>
       </div>
     </article>
   );
