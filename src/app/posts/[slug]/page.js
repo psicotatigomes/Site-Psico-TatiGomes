@@ -16,13 +16,13 @@ export default async function Post({ params }) {
   return (
     <>
       <div className={styles.imgWrapper}>
-        <Image
-          src={post.cover_image_url}
+        {/* <Image
+          src="/hero-cover.png"
           width={1090}
-          height={396}
+          height={300}
           alt="Post cover"
           className={styles.cover}
-        />
+        /> */}
       </div>
       <main className={styles.section}>
         <section

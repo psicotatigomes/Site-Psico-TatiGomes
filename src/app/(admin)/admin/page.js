@@ -153,7 +153,7 @@ export default function Admin() {
   return (
     <>
       <Flex justifyContent="space-evenly">
-        <Box>
+        <Box maxWidth="1900">
           <Heading as="h1">ADMIN PAGE</Heading>
 
           <VStack

@@ -129,6 +129,13 @@ export default async function Home() {
         </div>
       </section>
       <Image
+        src="/divider-bottom.png"
+        alt="section divider"
+        width={1440}
+        height={186}
+        className="divider"
+      />
+      <Image
         src="/divider-top.png"
         alt="section divider"
         width={1440}
