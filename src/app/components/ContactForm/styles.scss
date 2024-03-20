@@ -1,10 +1,17 @@
 .form {
+  width: 100%;
   max-width: 910px;
   padding: 8px;
   display: flex;
-  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
+
+  @media screen and (max-width: 600px) {
+    & {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
 }
 
 .form__infos {
@@ -35,10 +42,18 @@
     right: -214px;
     bottom: -12%;
   }
+
+  @media screen and (max-width: 750px) {
+    padding: 12px;
+  }
 }
 
 .infos__header {
   margin-bottom: 110px;
+
+  @media screen and (max-width: 750px) {
+    margin-bottom: 42px;
+  }
 }
 
 .infos__title {
@@ -63,6 +78,14 @@
     margin-bottom: 50px;
     color: #fff;
   }
+
+  @media screen and (max-width: 750px) {
+    margin-bottom: 24px;
+
+    a {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .form__fields {
@@ -79,7 +102,8 @@
     flex-direction: column;
     color: #8d8d8d;
 
-    input, textarea {
+    input,
+    textarea {
       background-color: transparent;
       border-left: 0;
       border-right: 0;
@@ -96,29 +120,38 @@
 
   &:focus-within {
     label {
-      color: #04849C;
+      color: #04849c;
     }
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 16px 24px;
   }
 }
 
 .button-wraper {
   margin-right: 28px;
   text-align: right;
+
+  @media screen and (max-width: 750px) {
+    margin-right: 0;
+    text-align: center;
+  }
 }
 
 .form__fields .button {
-  background-color: #F5B700;
+  background-color: #f5b700;
   padding: 15px 28px;
   border: 0;
   outline: 0;
   border-radius: 5px;
   font-weight: bold;
-
 }
 
 a.button {
+  display: inline-block;
   color: inherit;
   &:visited {
-    color: inherit
+    color: inherit;
   }
 }

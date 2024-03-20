@@ -41,6 +41,7 @@ export default async function Home() {
         className="divider"
       />
       <section className="about container">
+        <button className="mobile">Conheça mais sobre mim</button>
         <div className="img-container">
           <Image
             src="/about-image.png"
@@ -80,7 +81,7 @@ export default async function Home() {
             e relacional, autoconhecimento, crescimento  pessoal, desenvolver
             sua  resiliência, entre em contato! Posso ajudar!
           </p>
-          <button>Conheça mais sobre mim</button>
+          <button className="desktop">Conheça mais sobre mim</button>
         </div>
       </section>
       <Image
@@ -143,14 +144,16 @@ export default async function Home() {
         className="divider top"
       />
       <section className="blog" id="blog">
-        <h2 className="section-title">Blog</h2>
-        <p>
-          Abaixo estão artigos que escrevo a afim de elucidar conceitos sobre
-          EMDR, psicologia clínica, tratamentos de traumas e saúde mnetal no
-          geral.
-          <br />
-          Aproveite!
-        </p>
+        <div>
+          <h2 className="section-title">Blog</h2>
+          <p>
+            Abaixo estão artigos que escrevo a afim de elucidar conceitos sobre
+            EMDR, psicologia clínica, tratamentos de traumas e saúde mnetal no
+            geral.
+            <br />
+            Aproveite!
+          </p>
+        </div>
 
         <div className="articles">
           {posts.map(function renderPosts(post) {

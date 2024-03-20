@@ -24,6 +24,11 @@ nav {
     color: var(--white);
     font-weight: bold;
   }
+
+  @media screen and (max-width: 750px) {
+    gap: 16px;
+    font-size: 14px;
+  }
 }
 
 main {
@@ -31,9 +36,9 @@ main {
 }
 
 .hero {
+  display: flex;
   position: relative;
   height: calc(100dvh - var(--headerHeight));
-  display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.33);
 
@@ -105,9 +110,17 @@ main {
       font-weight: bold;
       padding: 1rem;
       font-size: 16px;
-      
+
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .text-container {
+      h1 {
+        width: min-content;
       }
     }
   }
@@ -119,6 +132,14 @@ main {
   padding: 2rem 4rem;
   gap: 3rem;
 
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
   .text-container {
     max-width: 48ch;
 
@@ -128,10 +149,18 @@ main {
       margin-bottom: 2rem;
     }
   }
+  button {
+    border: 0;
+    border-radius: 8px;
+    padding: 16px 12px;
+    background-color: var(--yellow);
+    font-weight: bold;
+  }
 
   .img-container {
     flex-basis: 500px;
     position: relative;
+    align-self: self-start;
 
     &::after {
       --bg-padding: 12px;
@@ -146,13 +175,27 @@ main {
     }
   }
 
-  .text-container {
-    button {
-      border: 0;
-      border-radius: 8px;
-      padding: 16px 12px;
-      background-color: var(--yellow);
-      font-weight: bold;
+  @media screen and (max-width: 750px) {
+    & {
+      flex-direction: column-reverse;
+      padding: 1rem;
+    }
+
+    .text-container {
+      order: 2;
+      max-width: 100%;
+    }
+    .img-container {
+      flex-basis: initial;
+      order: 1;
+    }
+
+    .mobile {
+      display: initial;
+    }
+
+    .desktop {
+      display: none;
     }
   }
 }
@@ -160,9 +203,9 @@ main {
 .path {
   display: flex;
   justify-content: center;
-  position: relative;
   gap: 3rem;
-  padding: 3rem 0;
+  padding: 2rem 4rem;
+  position: relative;
 
   .text-container {
     max-width: 52ch;
@@ -174,6 +217,8 @@ main {
 
   .img-container {
     position: relative;
+    align-self: self-start;
+
 
     &::after {
       --bg-padding: 12px;
@@ -187,6 +232,13 @@ main {
       z-index: -1;
     }
   }
+
+  @media screen and (max-width: 750px) {
+    & {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
 }
 
 .blog {
@@ -194,22 +246,31 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 65.625rem;
-  margin: 0 auto;
+  padding: 2rem 4rem;
   text-align: center;
+  margin: 0 auto;
+  text-align: justify;
 
   .articles {
     display: grid;
-    grid-template-columns: repeat(3, minmax(calc(33% - (2 * 1.5rem)), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.825rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 1rem;
   }
 }
 
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 62px;
-  padding-bottom: 72px;
+  align-items: center;  
+  padding: 2rem 4rem;
   background-image: url("/contact-background.jpg");
   background-size: cover;
   background-position: center;
@@ -217,6 +278,10 @@ main {
   & > p {
     margin-top: 48px;
     margin-bottom: 36px;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 1rem;
   }
 }
 
@@ -235,4 +300,5 @@ main {
   font-weight: bold;
   font-size: 28px;
   color: var(--blue);
+  text-align: left;
 }
