@@ -15,15 +15,7 @@ export default async function Post({ params }) {
 
   return (
     <>
-      <div className={styles.imgWrapper}>
-        {/* <Image
-          src="/hero-cover.png"
-          width={1090}
-          height={300}
-          alt="Post cover"
-          className={styles.cover}
-        /> */}
-      </div>
+      <div className={styles.imgWrapper} />
       <main className={styles.section}>
         <section
           dangerouslySetInnerHTML={parseStringToHtml(post.content_html)}

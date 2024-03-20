@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.scss";
 import { fetchPosts } from "@/app/lib/data";
 import PostCard from "../app/components/PostCard";
-import ContactForm from "./components/ContactForm";
+import Contact from "./components/ContactSection/Contact";
 
 export default async function Home() {
   const posts = await fetchPosts();
@@ -41,7 +42,9 @@ export default async function Home() {
         className="divider"
       />
       <section className="about container">
-        <button className="mobile">Conheça mais sobre mim</button>
+        <Link href="" className="mobile button">
+          Conheça mais sobre mim
+        </Link>
         <div className="img-container">
           <Image
             src="/about-image.png"
@@ -81,7 +84,9 @@ export default async function Home() {
             e relacional, autoconhecimento, crescimento  pessoal, desenvolver
             sua  resiliência, entre em contato! Posso ajudar!
           </p>
-          <button className="desktop">Conheça mais sobre mim</button>
+          <Link href="" className="button desktop">
+            Conheça mais sobre mim
+          </Link>
         </div>
       </section>
       <Image
@@ -168,14 +173,8 @@ export default async function Home() {
         height={186}
         className="divider"
       />
-      <section className="contact" id="contact">
-        <h2 className="section-title">Contato</h2>
-        <p>
-          Eu gostaria de ouvir de você. Envie uma mensagem e começaremos esta
-          conversa em direção à sua <br /> jornada de autocuidado.
-        </p>
-        <ContactForm />
-      </section>
+
+      <Contact />
     </main>
   );
 }

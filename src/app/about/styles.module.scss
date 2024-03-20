@@ -1,0 +1,57 @@
+.cover {
+  height: 300px;
+  background-image: url(../../../public/hero-cover.png);
+  background-position: center 20%;
+}
+
+.section {
+  padding: 2rem 4rem;
+
+  .textContainer {
+    P {
+      font-size: 18px;
+      line-height: 125%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    &::after {
+      --bg-padding: 12px;
+      content: "";
+      width: 75%;
+      height: calc(100% + (2 * var(--bg-padding)));
+      position: absolute;
+      background-color: var(--blue);
+      top: calc(-1 * var(--bg-padding));
+      right: calc(-1 * var(--bg-padding));
+      z-index: -1;
+    }
+  }
+
+  .sectionTitle {
+    text-align: center;
+
+    h2 {
+      color: var(--blue);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .ghost {
+      -webkit-text-stroke: 1px var(--blue);
+      text-stroke: 4px var(--blue);
+      color: white;
+    }
+  }
+
+  .subTitle {
+    color: var(--blue);
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
