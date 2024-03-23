@@ -42,7 +42,7 @@ export default async function Home() {
         className="divider"
       />
       <section className="about container">
-        <Link href="" className="mobile button">
+        <Link href="/about" className="mobile button">
           Conheça mais sobre mim
         </Link>
         <div className="img-container">
