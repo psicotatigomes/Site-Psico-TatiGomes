@@ -61,18 +61,27 @@ export default function Admin() {
           cover_image_url: image,
         }),
       });
-      setIsEditing(false);
     } else {
       if (!inputFileRef.current?.files) {
-        throw new Error("No file selected");
+        // throw new Error("No file selected");
+        await fetch("/admin/api", {
+          method: "POST",
+          body: JSON.stringify({
+            title: articleTitle,
+            content_html: markup,
+            cover_image_url:
+              "https://3bvumfbbwowg9jwd.public.blob.vercel-storage.com/fallback-post-CBtP39JmNeQaWL0qAaLEN52xrmgv2w.png",
+          }),
+        });
       }
 
       const file = inputFileRef.current.files[0];
 
-      const blob = await fetch(`/admin/api/images/?filename=${file.name}`, {
+      const blob = await fetch(`/admin/api/images/?filename=${file?.name}`, {
         method: "POST",
         body: file,
       });
+
       const blobRes = await blob.json();
       await fetch("/admin/api", {
         method: "POST",

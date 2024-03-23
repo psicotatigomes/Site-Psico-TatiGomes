@@ -10,7 +10,6 @@ export default function PostCard({ post }) {
     const doc = parser.parseFromString(htmlString, "text/html");
     return { __html: doc.body.innerHTML };
   };
-
   return (
     <article key={post.id} className={styles.article}>
       <div className={styles.article__cover}>
@@ -22,18 +21,13 @@ export default function PostCard({ post }) {
           fallback="/fallback-post.png"
         />
       </div>
-      <div className={styles.article__header}>
-        <p>{post.title}</p>
-      </div>
+      <div className={styles.article__header}>{/* <p>{post.title}</p> */}</div>
       <div
         className={styles.article__body}
         dangerouslySetInnerHTML={parseStringToHtml(post.content_html)}
       />
       <div className={styles.article__footer}>
-        <Link
-          className={styles.button}
-          href={`/posts/${post.title}&id=${post.id}`}
-        >
+        <Link className={styles.button} href={`/posts/${post.id}`}>
           Leia Agora
         </Link>
       </div>
