@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import draftToHtml from "draftjs-to-html";
 import { EditorState, ContentState, convertToRaw } from "draft-js";
 import styles from "./styles.module.scss";
-import EditorComponent from "../../components/Editor/Editor";
+// import EditorComponent from "../../components/Editor/Editor";
 import useSWR from "swr";
 import Image from "next/image";
 import {
@@ -22,9 +22,17 @@ import {
   Text,
   CircularProgress,
 } from "@chakra-ui/react";
-import htmlToDraft from "html-to-draftjs";
+// import htmlToDraft from "html-to-draftjs";
+import dynamic from "next/dynamic";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+const EditorComponent = dynamic(
+  () => import("../../components/Editor/Editor"),
+  { ssr: false },
+);
+
+const htmlToDraft = dynamic(() => import("html-to-draftjs"), { ssr: false });
 
 export default function Admin() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
