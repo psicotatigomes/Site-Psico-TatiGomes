@@ -19,7 +19,8 @@
 }
 
 .container {
-  width: 68rem;
+  max-width: 68rem;
+  padding: 2rem 4rem;
   margin: 3rem auto;
 
   h2 {
@@ -31,5 +32,13 @@
 
   p {
     margin-bottom: 1.2rem;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+  
+  @media screen and (max-width: 750px) {
+    padding: 1rem;
   }
 }
