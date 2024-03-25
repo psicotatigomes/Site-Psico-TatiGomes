@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import draftToHtml from "draftjs-to-html";
 import { EditorState, ContentState, convertToRaw } from "draft-js";
 import styles from "./styles.module.scss";
@@ -32,7 +32,16 @@ const EditorComponent = dynamic(
   { ssr: false },
 );
 
-const htmlToDraft = dynamic(() => import("html-to-draftjs"), { ssr: false });
+let htmlToDraft = null;
+if (typeof window === "object") {
+  htmlToDraft = require("html-to-draftjs").default;
+}
+
+// const htmlToDraft = dynamic(() => import("html-to-draftjs"), { ssr: false });
+
+// const htmlToDraft = dynamic(() =>
+//   import("html-to-draftjs").then((module) => module.NamedExport),
+// );
 
 export default function Admin() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -45,6 +54,7 @@ export default function Admin() {
   const [file, setFile] = useState(null);
   const [image, setData] = useState(null);
   const [currPost, setCurrPost] = useState(null);
+  // const [htmlToDraft, setHtmlToDraft] = useState(null);
 
   const { data, error, isLoading } = useSWR("/admin/api", fetcher);
 
@@ -115,7 +125,7 @@ export default function Admin() {
     setCurrPost(post);
     setData(null);
     setEditLoading(true);
-
+    console.log(post);
     const blocksFromHtml = htmlToDraft(post.content_html);
     const { contentBlocks, entityMap } = blocksFromHtml;
     const contentState = ContentState.createFromBlockArray(
@@ -170,7 +180,7 @@ export default function Admin() {
   return (
     <>
       <Flex justifyContent="space-evenly">
-        <Box maxWidth="1900">
+        <Box maxWidth="1000">
           <Heading as="h1">ADMIN PAGE</Heading>
 
           <VStack
