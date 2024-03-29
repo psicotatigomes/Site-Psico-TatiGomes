@@ -53,7 +53,7 @@ function ContactForm() {
         </p>
         <p className="input-wrapper">
           <label htmlFor="name">
-            Seu nome
+            Sua mensagem
             <textarea
               name="message"
               id="message"

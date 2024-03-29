@@ -1,9 +1,9 @@
 @import url("./reset.module.css");
 
 :root {
-  --blue: #04849c;
+  --blue: #208f7c;
   --white: #fff;
-  --yellow: #f5b700;
+  --yellow: #eec23f;
   --headerHeight: 62px;
 }
 
@@ -50,16 +50,16 @@ main {
   }
 
   .text-container {
-    margin-top: 11.125rem;
+    margin-top: 5.125rem;
     height: min-content;
     padding: 1rem;
     border-radius: 8px;
 
     small {
-      font-size: 14px;
+      font-size: 22px;
       font-weight: bold;
       text-align: left;
-      color: var(--blue);
+      color: var(--yellow);
       position: relative;
 
       &::after {
@@ -76,7 +76,7 @@ main {
     }
 
     h1 {
-      font-size: 98px;
+      font-size: 78px;
       font-weight: bold;
       margin-bottom: 12px;
 
@@ -85,7 +85,7 @@ main {
       }
 
       span:last-child {
-        color: var(--white);
+        color: var(--blue);
       }
     }
 
@@ -147,6 +147,7 @@ main {
       font-size: 18px;
       line-height: 125%;
       margin-bottom: 2rem;
+      text-align: justify;
     }
   }
 
@@ -221,7 +222,6 @@ main {
     position: relative;
     align-self: self-start;
 
-
     &::after {
       --bg-padding: 12px;
       content: "";
@@ -271,7 +271,7 @@ main {
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   padding: 2rem 4rem;
   background-image: url("/contact-background.jpg");
   background-size: cover;

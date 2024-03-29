@@ -41,6 +41,22 @@ export default async function Home() {
         height={186}
         className="divider"
       />
+      <div style={{ textAlign: "center" }}>
+        <strong>
+          <p>Olá, você está buscando lidar com seu sofrimento?</p>
+        </strong>
+        <p>
+          Busca acolhimento, quer apoio, orientação profissional e humanizada
+          para se cuidar, se fortalecer, se desenvolver?
+        </p>
+        <p>
+          Você pode fazer psicoterapia sem sair de casa e ter ajuda de uma
+          psicóloga para construir a ponte para novos caminhos e novos
+          significados em sua vida!
+        </p>
+        <p>Seja bem vindo (a) ao meu consultório on-line!</p>
+        <p>Deixa eu me apresentar!</p>
+      </div>
       <section className="about container">
         <Link href="/about" className="mobile button">
           Conheça mais sobre mim
@@ -57,12 +73,13 @@ export default async function Home() {
         <div className="text-container">
           <h2 className="section-title">Sobre mim</h2>
           <p>
-            Olá, me chamo Tatiana. Sou psicóloga e ofereço atendimento de forma
-            on-line para pessoas adultas. Se você sofre de alguma forma em razão
-            de traumas e gostaria de tratá-los para conquistar uma vida mais
-            fluída, leve com mais realizações, ou mesmo, se quer investir no seu
-            autoconhecimento, bem estar e resiliência para os desafios da vida.
-             Posso te ajudar!
+            Me chamo Tatiana, sou psicóloga e psicoterapeuta (CRP 06.80456).
+          </p>
+          <p>
+            Se você sofre de alguma forma em razão de traumas e gostaria de
+            tratá-los para conquistar uma vida mais fluída, leve com mais
+            realizações, ou mesmo, se quer investir no seu autoconhecimento, bem
+            estar e resiliência para os desafios da vida, posso te ajudar! 
           </p>
           <p>
             Ofereço atendimentos para pessoas que buscam tratar sofrimentos,
@@ -74,15 +91,17 @@ export default async function Home() {
           </p>
           <p>
             Não pratico apenas uma, mas diferentes abordagens de psicoterapias
-            respaldadas cientificamente para poder oferecer um conjunto de
-            estratégias e técnicas, com o objetivo de atender cada vez mais,
-            melhor e com mais eficiência a cada situação e pessoa.
+            respaldadas cientificamente para poder oferecer além de uma escuta
+            atenta, empática e acolhedora, também um conjunto de estratégias e
+            técnicas, com o objetivo de atender cada vez melhor e com mais
+            eficiência a cada pessoa e situação.
           </p>
           <p>
-            Então, se você sofre de alguma forma em razão de traumas e gostaria
-            de tratá-los ou mesmo, se quer investir no seu bem estar individual
-            e relacional, autoconhecimento, crescimento  pessoal, desenvolver
-            sua  resiliência, entre em contato! Posso ajudar!
+            Então, se você sofre de alguma forma e quer investir no seu bem
+            estar, quer se relacionar melhor, aprender se autorregular
+            emocionalmente, desenvolver sua  resiliência. Enfim, se busca cuidar
+            da sua saúde emocional e desenvolvimento pessoal, entre em contato!
+            Posso ajudar!
           </p>
           <Link href="" className="button desktop">
             Conheça mais sobre mim
