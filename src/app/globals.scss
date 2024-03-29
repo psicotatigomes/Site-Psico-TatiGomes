@@ -40,14 +40,12 @@ main {
   position: relative;
   height: calc(100dvh - var(--headerHeight));
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.33);
 
   video {
     height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
-    filter: brightness(0.85);
     z-index: -1;
   }
 
