@@ -111,7 +111,7 @@ export default async function Home() {
             da sua saúde emocional e desenvolvimento pessoal, entre em contato!
             Posso ajudar!
           </p>
-          <Link href="" className="button desktop">
+          <Link href="/about" className="button desktop">
             Conheça mais sobre mim
           </Link>
         </div>
