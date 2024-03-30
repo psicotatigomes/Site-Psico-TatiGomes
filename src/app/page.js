@@ -226,7 +226,7 @@ export default async function Home() {
                 <li>há busca para aprender a gerenciar o estresse;</li>
                 <li>
                   quiser lidar melhor com situações pontuais, como separações,
-                  transições, mudanças, perdas;
+                  transições, mudanças e perdas;
                 </li>
                 <li>a vida perder o sentido; </li>
                 <li>
@@ -276,15 +276,15 @@ export default async function Home() {
             </AccordionButton>
             <AccordionPanel pb={4}>
               <p>
-                Cada pessoa tem o seu tempo, seu ritmo. Porém, há outros fatores
-                que vão implicar na duração da terapia. Observo que há pessoas
-                que chegam com expectativa “de arrumar sua mesa, outras de
-                arrumar seu quarto e outras ainda querem arrumar a casa toda”,
-                ou seja, o objetivo da terapia é um dos fatores a ser
+                Cada pessoa tem o seu tempo e seu ritmo. Porém, há outros
+                fatores que vão implicar na duração da terapia. Observo que há
+                pessoas que chegam com expectativa “de arrumar sua mesa, outras
+                de arrumar seu quarto e outras ainda querem arrumar a casa
+                toda”, ou seja, o objetivo da terapia é um dos fatores a ser
                 considerado em relação a sua duração. Outro fator é que a
                 terapia é um processo de corresponsabilidade entre paciente e
-                terapeuta. Então, vai depender também do empenho e das
-                disponibilidades da pessoa para lidar com o desenvolvimento das
+                terapeuta. Então, vai depender também do empenho e da
+                disponibilidade da pessoa para lidar com o desenvolvimento das
                 suas questões.
               </p>
             </AccordionPanel>
@@ -454,7 +454,7 @@ export default async function Home() {
                 Sabemos que pode haver oscilações de internet, problemas no
                 equipamento e vários fatores que influenciam a chamada até mesmo
                 no momento da consulta. Caso isso aconteça e não consiga
-                realizar o retorno imediato a psicóloga, assim que for possível
+                realizar o retorno imediato à psicóloga, assim que for possível
                 entre em contato pelas vias de comunicação informadas no site
                 para que sua consulta seja reagendada.
               </p>
@@ -501,7 +501,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    14-Há alguma demanda ou casos os quais não são atendidos
+                    14. Há alguma demanda ou casos os quais não são atendidos
                     neste consultório psicológico on-line?
                   </strong>
                 </Box>
