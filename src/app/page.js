@@ -209,7 +209,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>1-Quando devo procurar um psicólogo (a)?</strong>
+                  <strong>1. Quando devo procurar um psicólogo (a)?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -223,7 +223,7 @@ export default async function Home() {
                 <li>
                   quiser aprender novas habilidades para se comunicar melhor;
                 </li>
-                <li>há busca para aprender a gerenciar o estresse ;</li>
+                <li>há busca para aprender a gerenciar o estresse;</li>
                 <li>
                   quiser lidar melhor com situações pontuais, como separações,
                   transições, mudanças, perdas;
@@ -236,8 +236,11 @@ export default async function Home() {
                 <li>sentir que perdeu o controle sobre si e com os outros; </li>
                 <li>
                   se perceber estagnado na vida e quiser adquirir
-                  autoconhecimento para realizar alguma mudança.
+                  autoconhecimento para realizar alguma mudança;
                 </li>
+                <li>quiser aprender a regular-se emocionalmente;</li>
+                <li>tratar de transtornos de saúde mental;</li>
+                <li>melhorar relacionamentos.</li>
               </ul>
             </AccordionPanel>
           </AccordionItem>
@@ -245,7 +248,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>2 - Terapia online funciona?</strong>
+                  <strong>2. Terapia online funciona?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -255,7 +258,7 @@ export default async function Home() {
                 O acompanhamento psicológico online tem a mesma eficácia do
                 acompanhamento presencial, desde que respeitadas as condições
                 necessárias. A terapia online tem como benefício reduzir custos
-                e tempo com deslocamento também proporciona ao cliente realizar
+                e tempo com deslocamento, também proporciona ao cliente realizar
                 a sessão no local onde se sentir mais confortável e com mais
                 privacidade.
               </p>
@@ -266,7 +269,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>3 - Qual a duração do tratamento? </strong>
+                  <strong>3. Qual a duração do tratamento? </strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -304,7 +307,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>3. Aceita plano de saúde?</strong>
+                  <strong>5. Aceita plano de saúde?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -322,7 +325,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>5. Qual é a modalidade de atendimento?</strong>
+                  <strong>6. Qual é a modalidade de atendimento?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -337,7 +340,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    6. Como funciona e o que é necessário para o atendimento
+                    7. Como funciona e o que é necessário para o atendimento
                     on-line?
                   </strong>
                 </Box>
@@ -378,7 +381,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>6. Como funciona o pagamento?</strong>
+                  <strong>8. Como funciona o pagamento?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -398,7 +401,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    7 Se eu faltar da terapia, a sessão vai ser cobrada?
+                    9. Se eu faltar da terapia, a sessão vai ser cobrada?
                   </strong>
                 </Box>
                 <AccordionIcon />
@@ -417,7 +420,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    8. Com devo fazer se eu não puder comparecer no dia e
+                    10. Com devo fazer se eu não puder comparecer no dia e
                     horário agendado ?
                   </strong>
                 </Box>
@@ -439,7 +442,9 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>9. O que fazer em caso de problemas técnicos?</strong>
+                  <strong>
+                    11. O que fazer em caso de problemas técnicos?
+                  </strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -460,7 +465,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    10. Sou brasileiro (a) estou fora do Brasil ou irei morar
+                    12. Sou brasileiro (a) estou fora do Brasil ou irei morar
                     fora, posso fazer a terapia online?
                   </strong>
                 </Box>
@@ -478,7 +483,7 @@ export default async function Home() {
             <AccordionButton>
               <h2>
                 <Box as="span">
-                  <strong>11. Qual o valor da sessão de terapia?</strong>
+                  <strong>13. Qual o valor da sessão de terapia?</strong>
                 </Box>
                 <AccordionIcon />
               </h2>
@@ -496,7 +501,7 @@ export default async function Home() {
               <h2>
                 <Box as="span">
                   <strong>
-                    12-Há alguma demanda ou casos os quais não são atendidos
+                    14-Há alguma demanda ou casos os quais não são atendidos
                     neste consultório psicológico on-line?
                   </strong>
                 </Box>
