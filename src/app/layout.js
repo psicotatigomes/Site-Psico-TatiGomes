@@ -1,5 +1,6 @@
 import { inter } from "./fonts";
 import Link from "next/link";
+import { UIChakraProvider } from "./providers";
 
 import "./globals.scss";
 
@@ -11,16 +12,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <Link href="/#hero">Início</Link>
-          <Link href="/#about">Sobre mim</Link>
-          <Link href="/#services">Serviços</Link>
-          <Link href="/#blog">Blog</Link>
-          <Link href="/#contact">Contato</Link>
-        </nav>
-        {children}
-      </body>
+      <UIChakraProvider>
+        <body className={inter.className}>
+          <nav>
+            <Link href="/#hero">Início</Link>
+            <Link href="/#about">Sobre mim</Link>
+            <Link href="/#services">Serviços</Link>
+            <Link href="/#blog">Blog</Link>
+            <Link href="/#faq">FAQ</Link>
+            <Link href="/#contact">Contato</Link>
+          </nav>
+          {children}
+        </body>
+      </UIChakraProvider>
     </html>
   );
 }

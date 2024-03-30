@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { Providers } from "./admin/providers";
+import { UIChakraProvider } from "../providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +11,9 @@ export const metadata = {
 export default function AdminLayout({ children }) {
   return (
     <html lang="en">
-      <Providers>
+      <UIChakraProvider>
         <body className={inter.className}>{children}</body>
-      </Providers>
+      </UIChakraProvider>
     </html>
   );
 }

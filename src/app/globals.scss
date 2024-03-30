@@ -56,10 +56,10 @@ main {
     border-radius: 8px;
 
     small {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: bold;
       text-align: left;
-      color: var(--yellow);
+      color: var(--white);
       position: relative;
 
       &::after {
@@ -266,6 +266,14 @@ main {
   @media screen and (max-width: 750px) {
     padding: 1rem;
   }
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 4rem;
+  gap: .8rem;
 }
 
 .contact {

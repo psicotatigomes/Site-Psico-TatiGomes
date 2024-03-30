@@ -4,10 +4,7 @@ import styles from "./styles.module.scss";
 import Contact from "@/app/components/ContactSection/Contact";
 
 export default async function Post({ params }) {
-  console.log(params);
-  console.log(decodeURIComponent(params.slug));
   const postId = decodeURIComponent(params.slug);
-  console.log(postId);
   const res = await sql`SELECT * FROM posts WHERE id=${postId}`;
   const post = res.rows.at(0);
 

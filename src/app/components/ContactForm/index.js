@@ -26,13 +26,13 @@ function ContactForm() {
                 alt="Telephone icon"
               />
             </span>
-            +1012 3456 789
+            +55 13 99618-8808
           </a>
           <a>
             <span>
               <Image src="/email.svg" width={24} height={24} alt="Email icon" />
             </span>
-            psi.tatigomes@gmail.com
+            consultorio.psi.tatigomes@gmail.com
           </a>
         </div>
         <div className="adornament circle-1"></div>
