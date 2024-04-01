@@ -81,39 +81,33 @@ export default async function Home() {
         <div className="text-container">
           <h2 className="section-title">Sobre mim</h2>
           <p>
-            Me chamo Tatiana, sou psicóloga e psicoterapeuta (CRP 06.80456).
+            Olá, me chamo Tatiana, sou psicóloga e psicoterapeuta (CRP
+            06/80456).
           </p>
           <p>
-            Se você sofre de alguma forma em razão de traumas e gostaria de
-            tratá-los para conquistar uma vida mais fluída, leve com mais
-            realizações, ou mesmo, se quer investir no seu autoconhecimento, bem
-            estar e resiliência para os desafios da vida, posso te ajudar! 
+            Posso te ajudar se você sofre de alguma forma, em razão de traumas e
+            gostaria de tratá-los para conquistar uma vida mais fluída, leve,
+            com mais realizações, ou mesmo, se quer investir no seu
+            autoconhecimento, bem estar e resiliência para os desafios da vida.
           </p>
           <p>
-            Ofereço atendimentos para pessoas que buscam tratar sofrimentos,
-            bloqueios emocionais, fobias e vários outros tipos de sintomas e
-            transtornos relacionados a traumas através das psicoterapias EMDR e
-            TCC- Terapia Cognitiva Comportamental de Terceira Geração com foco
-            no tratamento de traumas além de outras abordagens complementares
-            como Mindfulness e Psicologia Positiva.  
+            Não pratico apenas uma, mas diferentes abordagens de psicoterapias e
+            desenvolvimento pessoal, respaldadas cientificamente para poder
+            oferecer além de uma escuta atenta, presença empática e acolhedora,
+            também um conjunto de estratégias e técnicas, com o objetivo de
+            atender cada vez melhor e com mais eficiência a cada pessoa e
+            situação.
           </p>
           <p>
-            Não pratico apenas uma, mas diferentes abordagens de psicoterapias
-            respaldadas cientificamente para poder oferecer além de uma escuta
-            atenta, empática e acolhedora, também um conjunto de estratégias e
-            técnicas, com o objetivo de atender cada vez melhor e com mais
-            eficiência a cada pessoa e situação.
+            Enfim, se busca cuidar da sua saúde mental, emocional e
+            desenvolvimento pessoal, entre em contato! Posso ajudar!
           </p>
-          <p>
-            Então, se você sofre de alguma forma e quer investir no seu bem
-            estar, quer se relacionar melhor, aprender se autorregular
-            emocionalmente, desenvolver sua  resiliência. Enfim, se busca cuidar
-            da sua saúde emocional e desenvolvimento pessoal, entre em contato!
-            Posso ajudar!
+
+          <p className="btn-placeholder">
+            <Link href="/about" className="button desktop">
+              Conheça mais sobre mim
+            </Link>
           </p>
-          <Link href="/about" className="button desktop">
-            Conheça mais sobre mim
-          </Link>
         </div>
       </section>
       <Image
@@ -130,26 +124,41 @@ export default async function Home() {
         height={186}
         className="divider top"
       />
-      <section className="path" id="services">
+      <section className="path" id="therapy">
         <div className="text-container">
           <h2 className="section-title">
             Encontre o caminho para uma vida mais livre, leve e plena!
           </h2>
           <p>
             Traumas não tratados, conscientes ou não, podem se tornar bloqueio
-            para uma mais livre, leve e plena. Eu ofereço psicoterapia para
+            para uma vida mais livre, leve e plena. Eu ofereço psicoterapia para
             tratamento de questões, sofrimentos e transtornos relacionados a
-            traumas emocionais. Te ajudo a deixar o seu passado, no passado e a
-            tomar as rédeas da sua vida!!
+            traumas emocionais.
           </p>
           <p>
-            Se tratar traumas não for uma questão para você, mas sente a
-            necessidade de se fortalecer, crescer, amplicar seu olhar, suas
-            atitudes para lidar melhor com os desafios da vida, cuidar do seu
-            bem estar e alcançar suas metas. Se buscar espaço de acolhimento e
-            aprendizado para isso, também ofereço outros serviços como grupos e
-            workshops para seu apoio emocional, autoconhecimento e ferramentas
-            para desenvolver sua resiliência e habilidades socioemocionais.
+            Ofereço psicoterapia para pessoas que buscam tratar sofrimentos,
+            bloqueios emocionais, fobias e vários outros tipos de sintomas e
+            transtornos de saúde mental relacionados a traumas.
+          </p>
+          <p>
+            Meu trabalho fundamenta-se nas psicoterapias EMDR- Eye Movement
+            Desensitization and Reprocessing- e TCC- Terapia Cognitiva
+            Comportamental de Terceira Geração com foco no tratamento de traumas
+            além de outras abordagens complementares como Mindfulness e
+            Psicologia Positiva.
+          </p>
+          <p>
+            A psicoterapia pode ser a ponte para sua transformação! Posso te
+            ajudar a deixar o seu passado, no passado e a tomar as rédeas da sua
+            vida!!
+          </p>
+          <p>
+            <a
+              className="button"
+              href={`https://api.whatsapp.com/send?phone=5513996188808&text=Olá, gostaria de agendar um primeiro contato!`}
+            >
+              Entre em contato!
+            </a>
           </p>
         </div>
         <div className="img-container">

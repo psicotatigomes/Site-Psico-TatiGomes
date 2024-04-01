@@ -19,10 +19,11 @@ nav {
   gap: 42px;
   height: var(--headerHeight);
 
-  a {
+  a, span {
     text-transform: capitalize;
     color: var(--white);
     font-weight: bold;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 750px) {
@@ -141,13 +142,19 @@ main {
   .text-container {
     max-width: 48ch;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     p {
       font-size: 18px;
       line-height: 125%;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       text-align: justify;
+    }
+
+    p.btn-placeholder {
+      display: flex;
+      flex-grow: 1;
+      margin-bottom: 0;
     }
   }
 
@@ -185,6 +192,8 @@ main {
     }
 
     .text-container {
+      display: flex;
+      flex-wrap: wrap;
       order: 2;
       max-width: 100%;
     }
@@ -210,11 +219,21 @@ main {
   padding: 2rem 4rem;
   position: relative;
 
+  a.button {
+    border: 0;
+    border-radius: 8px;
+    padding: 16px 12px;
+    background-color: var(--yellow);
+    font-weight: bold;
+    align-self: flex-end;
+  }
+
   .text-container {
     max-width: 52ch;
 
     p {
       margin-bottom: 16px;
+      text-align: justify;
     }
   }
 
@@ -273,7 +292,7 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 2rem 4rem;
-  gap: .8rem;
+  gap: 0.8rem;
 }
 
 .contact {

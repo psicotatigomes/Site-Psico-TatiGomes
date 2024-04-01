@@ -1,7 +1,13 @@
 import { inter } from "./fonts";
 import Link from "next/link";
 import { UIChakraProvider } from "./providers";
-
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+} from "@chakra-ui/react";
 import "./globals.scss";
 
 export const metadata = {
@@ -17,7 +23,18 @@ export default function RootLayout({ children }) {
           <nav>
             <Link href="/#hero">Início</Link>
             <Link href="/#about">Sobre mim</Link>
-            <Link href="/#services">Serviços</Link>
+            <Menu>
+              <MenuButton as={"span"}>Serviços</MenuButton>
+              <MenuList>
+                <MenuItem>
+                  <Link href="/#therapy">Psicoterapia</Link>
+                </MenuItem>
+                <MenuDivider />
+                <MenuItem>
+                  <Link href="/academia-emocional">Academia emocional</Link>
+                </MenuItem>
+              </MenuList>
+            </Menu>
             <Link href="/#blog">Blog</Link>
             <Link href="/#faq">FAQ</Link>
             <Link href="/#contact">Contato</Link>
