@@ -298,7 +298,8 @@ function FAQ() {
             <p>
               O valor da sessão não pode ser divulgado publicamente, de acordo
               com as normas éticas do Conselho Regional de Psicologia. Entre em
-              contato via WhatsApp que tiro todas as dúvidas.
+              contato via WhatsApp para que eu possa esclarecer todas as
+              dúvidas.
             </p>
           </AccordionPanel>
         </AccordionItem>
