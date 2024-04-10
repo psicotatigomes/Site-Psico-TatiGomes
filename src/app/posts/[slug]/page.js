@@ -9,7 +9,6 @@ export default async function Post({ params }) {
   const post = res.rows.at(0);
 
   const parseStringToHtml = (htmlString) => {
-    console.log("POST", post);
     const doc = parse(htmlString);
     return { __html: doc.innerHTML };
   };

@@ -2,13 +2,12 @@
 import Link from "next/link";
 import ImageWithFallback from "../ImageWithFallback";
 import styles from "./styles.module.scss";
+import { parse } from "node-html-parser";
 
 export default function PostCard({ post }) {
-  const parser = new DOMParser();
-
   const parseStringToHtml = (htmlString) => {
-    const doc = parser.parseFromString(htmlString, "text/html");
-    return { __html: doc.body.innerHTML };
+    const doc = parse(htmlString);
+    return { __html: doc.innerHTML };
   };
   return (
     <article key={post.id} className={styles.article}>
