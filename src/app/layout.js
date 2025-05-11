@@ -26,18 +26,11 @@ export default function RootLayout({ children }) {
           <nav>
             <Link href="/#hero">Início</Link>
             <Link href="/#about">Sobre mim</Link>
-            <Menu>
-              <MenuButton as={"span"}>Serviços</MenuButton>
-              <MenuList>
-                <MenuItem>
-                  <Link href="/#therapy">Psicoterapia</Link>
-                </MenuItem>
-                <MenuDivider />
-                <MenuItem>
-                  <Link href="/academia-emocional">Academia emocional</Link>
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            <Link href="/academia-emocional">Academia emocional</Link>
+            <Link href="/saude-mental-empresas">
+              Saúde Mental para empresas
+            </Link>
+            <Link href="/psicoterapia">Psicoterapia</Link>
             <Link href="/#blog">Blog</Link>
             <Link href="/#faq">FAQ</Link>
             <Link href="/#contact">Contato</Link>

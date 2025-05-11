@@ -18,26 +18,19 @@ function EmotionalAcademy() {
           />
         </div>
         <div className={styles.textContainer}>
-          <h1>Academia emocional</h1>
-          <ul>
-            <li>
-              Mentoria individual e em grupo para desenvolvimento pessoal
-              baseado com foco na identificação e potencialização das forças
-              pessoais.
-            </li>
-            <li>
-              Grupo Conexão para apoio terapêutico, auto-conhecimento e
-              desenvolvimento da inteligência emocional e comunicação
-              interpessoal. Um grupo referenciado na CNV (comunicação não
-              violenta), psicologia positiva e Mindfullness.
-            </li>
-            <li>
-              Workshop: O Pode da Escuta referenciado na Comunicação Não
-              Violenta e no Mindfullness
-            </li>
-
-            <li>Palestras psicoeducativas</li>
-          </ul>
+          <h1>Saúde Mental nas Empresas</h1>
+          <p>Avaliação de Risco Psicossocial para implementação de NR1.</p>
+          <p>Implementação de Programas de Saúde Mental.</p>
+          <p>Programas de Saúde Mental Burnout</p>
+          <p>Programa de Inteligência Emocional para Líderes</p>
+          <p>Programa de Plantão Picológico</p>
+          <p>Programa de Saúde Mental e Clima Organizacional</p>
+          <p>Programa para Manejo de Estresse</p>
+          <p>Programa Equilíbrio Vida Trabalho</p>
+          <p>Programa Psicologia Positiva</p>
+          <p>Programa Sobre Assédio Moral</p>
+          <p>Programa de Avalição Psicológica</p>
+          <p>Programa para Comunicação Interpessoal</p>
         </div>
       </section>
       <Image

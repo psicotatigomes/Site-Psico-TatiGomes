@@ -19,11 +19,12 @@ function About() {
       <div className="text-container">
         <h2 className="section-title">Sobre mim</h2>
         <p>
-          Olá, me chamo Tatiana, sou psicóloga e psicoterapeuta (CRP 06/80456).
+          Olá, me chamo Tatiana, sou psicóloga atuante em saúde mental
+          ocupacional e psicoterapeuta (CRP 06/80456).
         </p>
         <p>
-          Hoje alinho minhas práticas de conhecimentos teóricos ao trabalho
-          focado no trauma psicológico e suas diversas consequências.
+          Na clínica alinho minhas práticas de conhecimentos teóricos ao
+          trabalho focado no trauma psicológico e suas diversas consequências.
         </p>
         <p>
           Posso te ajudar se você sofre de alguma forma, em razão de traumas e

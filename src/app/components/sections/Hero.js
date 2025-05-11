@@ -21,7 +21,7 @@ function Hero() {
           </a>
         </p>
         <p className="subtitle">
-          Descubra o caminho para uma jornada de autocuidado e transformação
+          Encontre o caminho para uma vida leve e plena
         </p>
       </div>
     </section>

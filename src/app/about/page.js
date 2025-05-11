@@ -97,9 +97,8 @@ function About() {
               com forças pessoais” pelo Instituto Líder Flow com Helder Kamei.
             </li>
             <li>
-              Especializanda em TCC - Terapia Cognitiva Comportamental pela
-              PUCRS com foco nas  TCCs de terceira geração e tratamentos de
-              traumas.
+              Especializada em TCC - Terapia Cognitiva Comportamental pela PUCRS
+              com foco nas  TCCs de terceira geração e tratamentos de traumas.
             </li>
           </ul>
 
@@ -129,10 +128,8 @@ function About() {
             realizações, para alcançarem suas metas e fluidez no seu caminhar.
           </p>
           <p>
-            Então, se você sofre de alguma forma em razão de traumas e gostaria
-            de tratá-los ou mesmo, se quer investir no seu bem estar individual
-            e relacional, autoconhecimento, crescimento  pessoal, desenvolver
-            sua  resiliência, entre em contato! Posso ajudar!
+            Então, se você busca saúde mental e desenvolvimento para você ou
+            para sua empresa, posso te ajudar!
           </p>
           <br />
           <br />

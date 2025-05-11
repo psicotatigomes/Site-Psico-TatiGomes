@@ -12,4 +12,3 @@ export async function fetchPosts() {
     throw new Error("Failed to fetch posts data.");
   }
 }
-

@@ -18,26 +18,15 @@ function EmotionalAcademy() {
           />
         </div>
         <div className={styles.textContainer}>
-          <h1>Academia emocional</h1>
-          <ul>
-            <li>
-              Mentoria individual e em grupo para desenvolvimento pessoal
-              baseado com foco na identificação e potencialização das forças
-              pessoais.
-            </li>
-            <li>
-              Grupo Conexão para apoio terapêutico, auto-conhecimento e
-              desenvolvimento da inteligência emocional e comunicação
-              interpessoal. Um grupo referenciado na CNV (comunicação não
-              violenta), psicologia positiva e Mindfullness.
-            </li>
-            <li>
-              Workshop: O Pode da Escuta referenciado na Comunicação Não
-              Violenta e no Mindfullness
-            </li>
-
-            <li>Palestras psicoeducativas</li>
-          </ul>
+          <h1>Psicoterepia</h1>
+          <p>
+            Olá, você está buscando cuidar do seu bem estar, investir no seu
+            auto-conhecimento e descobrir ou fortalecer seu poder pessoal? Você
+            pode fazer psicoterapia sem sair de casa, quer você esteja no Brasil
+            ou no exterior. A psicoterapia pode ser um processo de travessia
+            para novos caminhos e significados em sua vida! Seja bem vindo (a)
+            ao meu consultório on-line!
+          </p>
         </div>
       </section>
       <Image
